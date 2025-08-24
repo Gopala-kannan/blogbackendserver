@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['52.66.239.49', '*']
 
+CSRF_TRUSTED_ORIGINS = ['https://blogbackendserver-590e.onrender.com']
+
+
+
 
 # Application definition
 
