@@ -139,8 +139,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://localhost:8000",  
+    "https://gopalblog.netlify.app/",
+    "https://blogbackendserver-590e.onrender.com",  
 ]
 
 CORS_ALLOW_CREDENTIALS = True
