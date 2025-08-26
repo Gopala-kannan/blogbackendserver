@@ -24,8 +24,8 @@ def register(request):
     serializer = BlogPostRegister(data=request.data)
     if serializer.is_valid():
         serializer.save()
-        return Response({"message": "user Registered successfully"}, status=201)
-    return Response(serializer.errors, status=400)
+        return JsonResponse({"message": "user Registered successfully"}, status=201)
+    return JsonResponse(serializer.errors, status=400)
 
 @api_view(['POST'])
 def login_view(request):
@@ -35,16 +35,16 @@ def login_view(request):
     user= authenticate(request, username=username, password=password)
     if user is not None:
         login(request, user)
-        return Response({"message": "Login successful"}, status=201)
+        return JsonResponse({"message": "Login successful"}, status=201)
     else:
-        return Response({"message": "Check your userID or password"}, status=400)
-    
+        return JsonResponse({"message": "Check your userID or password"}, status=400)
+
 @api_view(['POST'])
 def logout_view(request):
-    if request.user.is_authenticate():
+    if request.user.is_authenticated:
         logout(request)
-        return Response({"message":"Logout successed"}, status=200)
-    return Response({"message": "Logout not work"})
+        return JsonResponse({"message":"Logout successed"}, status=200)
+    return JsonResponse({"message": "Logout not work"})
 
 @api_view(['POST'])
 def blog(request): 
