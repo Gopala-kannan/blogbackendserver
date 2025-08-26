@@ -141,7 +141,6 @@ STATIC_URL = 'static/'
 CORS_ALLOWED_ORIGINS = [
     "https://blogfrontendui.onrender.com",
     "https://blogbackendserver-590e.onrender.com",  
-    "http://localhost:5173/",
 ]
 
 CORS_ALLOW_CREDENTIALS = True
