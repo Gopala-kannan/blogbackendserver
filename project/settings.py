@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['52.66.239.49', '*']
 
+CSRF_TRUSTED_ORIGINS = ['https://blogbackendserver-590e.onrender.com']
+
+
+
 
 # Application definition
 
@@ -134,10 +138,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "http://localhost:8000",  
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://gopalblog.netlify.app/",
+#     "https://blogbackendserver-590e.onrender.com",  
+# ]
 
 CORS_ALLOW_CREDENTIALS = True
 
