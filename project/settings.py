@@ -141,6 +141,7 @@ STATIC_URL = 'static/'
 CORS_ALLOWED_ORIGINS = [
     "https://blogfrontendui.onrender.com",
     "https://blogwebui.netlify.app",
+    "https://blogfrontendui.vercel.app",
     "https://blogbackendserver-590e.onrender.com",  
 ]
 
